@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookedSlot">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins"
+        android:text="Booked slot details"
+        android:textColor="#272727"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPayDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_italic"
+        android:paddingTop="6dp"
+        android:text="start time"
+        android:textAlignment="center"
+        android:textColor="#636363"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/btnFillWater"
+        android:layout_width="256dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#272727"
+        android:text="Fill water"
+        android:textAllCaps="false"
+        app:cornerRadius="6dp"
+        app:icon="@drawable/ic_baseline_water_24"
+        app:iconGravity="end"
+        app:iconTint="#31BFFF"
+        app:layout_constraintStart_toStartOf="@+id/btnStartWash"
+        app:layout_constraintTop_toBottomOf="@+id/txtPayDone" />
+
+    <Button
+        android:id="@+id/btnCancelDry"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#373737"
+        android:text="Cancel drying"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_baseline_do_disturb_24"
+        app:iconGravity="end"
+        app:iconTint="#F16157"
+        app:layout_constraintBottom_toBottomOf="@+id/btnStartDry"
+        app:layout_constraintStart_toEndOf="@+id/btnStartDry"
+        app:shapeAppearance="@style/RightButtonShapeAppearance" />
+
+    <Button
+        android:id="@+id/btnCancelWash"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#373737"
+        android:text="Cancel washing"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_baseline_do_disturb_24"
+        app:iconGravity="end"
+        app:iconTint="#F16157"
+        app:layout_constraintBottom_toBottomOf="@+id/btnStartWash"
+        app:layout_constraintStart_toEndOf="@+id/btnStartWash"
+        app:shapeAppearance="@style/RightButtonShapeAppearance" />
+
+    <TextView
+        android:id="@+id/txtWasherBuffer"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancelWash"
+        app:layout_constraintEnd_toEndOf="@+id/btnCancelWash"
+        app:layout_constraintStart_toStartOf="@+id/btnStartWash" />
+
+    <TextView
+        android:id="@+id/txtDryerStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_italic"
+        android:text="dryer end time"
+        app:layout_constraintEnd_toEndOf="@+id/btnCancelDry"
+        app:layout_constraintTop_toBottomOf="@+id/btnCancelDry" />
+
+    <TextView
+        android:id="@+id/txtDryerDone"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/txtDryerBuffer"
+        app:layout_constraintStart_toStartOf="@+id/txtDryerBuffer"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartWash" />
+
+    <TextView
+        android:id="@+id/txtDryerBuffer"
+        android:layout_width="251dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartDry"
+        app:layout_constraintEnd_toEndOf="@+id/btnCancelDry"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btnStartDry" />
+
+    <Button
+        android:id="@+id/btnStartDry"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#272727"
+        android:text="Start drying"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_baseline_dry_cleaning_24"
+        app:iconTint="#FFEB3B"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancelDry"
+        app:layout_constraintStart_toStartOf="@+id/btnDone"
+        app:layout_constraintTop_toBottomOf="@+id/txtDryerBuffer"
+        app:shapeAppearance="@style/LeftButtonShapeAppearance" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="256dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#272727"
+        android:text="Finished laundry and closed the slider"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_baseline_key_24"
+        app:iconGravity="end"
+        app:iconTint="#C8AFF3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTimerDone" />
+
+    <TextView
+        android:id="@+id/txtTimerDone"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:fontFamily="@font/poppins"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnDone"
+        app:layout_constraintEnd_toEndOf="@+id/btnDone"
+        app:layout_constraintStart_toStartOf="@+id/btnDone"
+        app:layout_constraintTop_toBottomOf="@+id/btnCancelDry" />
+
+    <TextView
+        android:id="@+id/txtWasherDone"
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/txtWasherBuffer"
+        app:layout_constraintStart_toStartOf="@+id/txtWasherBuffer"
+        app:layout_constraintTop_toBottomOf="@+id/btnFillWater" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartWash"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:text="Start washing"
+        android:textAllCaps="false"
+        app:backgroundTint="#272727"
+        app:icon="@drawable/ic_baseline_cyclone_24"
+        app:iconTint="#86ED4F"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancelWash"
+        app:layout_constraintStart_toStartOf="@+id/btnStartDry"
+        app:layout_constraintTop_toBottomOf="@+id/txtWasherBuffer"
+        app:shapeAppearance="@style/LeftButtonShapeAppearance" />
+
+    <TextView
+        android:id="@+id/txtWasherStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_italic"
+        android:text="washer end time"
+        app:layout_constraintEnd_toEndOf="@+id/btnCancelWash"
+        app:layout_constraintTop_toBottomOf="@+id/btnCancelWash" />
+
+    <TextView
+        android:id="@+id/txtEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_italic"
+        android:text="end time"
+        app:layout_constraintEnd_toEndOf="@+id/btnDone"
+        app:layout_constraintTop_toBottomOf="@+id/btnDone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

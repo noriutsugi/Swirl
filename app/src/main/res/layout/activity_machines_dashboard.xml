@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MachinesDashboard">
+
+    <ImageButton
+        android:id="@+id/imgBtnProfile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_face_24"
+        app:tint="#272727" />
+
+    <ImageButton
+        android:id="@+id/imgBtnTxn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtnProfile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_receipt_long_24"
+        app:tint="#272727" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutMachine1"
+        android:layout_width="176dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayoutMachine2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/my_border">
+
+
+        <Button
+            android:id="@+id/btnMachine1"
+            android:layout_width="174dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Select"
+            app:icon="@drawable/ic_baseline_arrow_forward_24"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="174dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtAvailable"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Available for use."
+                android:textAlignment="center"
+                android:textColor="#256019"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtBusy"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Busy until 12:00"
+                android:textAlignment="center"
+                android:textColor="#7C1717"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtMaintenance" />
+
+            <TextView
+                android:id="@+id/txtPowerOff"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Powered Off."
+                android:textAlignment="center"
+                android:textColor="#272727"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAvailable" />
+
+            <TextView
+                android:id="@+id/txtMaintenance"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Under maintenance."
+                android:textAlignment="center"
+                android:textColor="#272727"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPowerOff" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="174dp"
+            android:layout_height="184dp"
+            android:background="@drawable/ic_baseline_local_laundry_service_24"
+            android:backgroundTint="#F6EEE7"
+            app:layout_constraintBottom_toTopOf="@+id/btnMachine1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+            <TextView
+                android:id="@+id/txtMachName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Washing machine 1"
+                android:textColor="#272727"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtHOR"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtHOR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/poppins_italic"
+                android:text="Default Hostel"
+                android:textColor="#272727"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtMachName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutMachine2"
+        android:layout_width="176dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayoutMachine1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/my_border">
+
+
+        <Button
+            android:id="@+id/btnMachine2"
+            android:layout_width="174dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Select"
+            app:icon="@drawable/ic_baseline_arrow_forward_24"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutq"
+            android:layout_width="174dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtAvailable2"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Available for use."
+                android:textAlignment="center"
+                android:textColor="#256019"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtBusy2"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Busy until 12:00"
+                android:textAlignment="center"
+                android:textColor="#7C1717"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtMaintenance2" />
+
+            <TextView
+                android:id="@+id/txtPowerOff2"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Powered Off."
+                android:textAlignment="center"
+                android:textColor="#272727"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAvailable2" />
+
+            <TextView
+                android:id="@+id/txtMaintenance2"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Under maintenance."
+                android:textAlignment="center"
+                android:textColor="#272727"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPowerOff2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="174dp"
+            android:layout_height="184dp"
+            android:background="@drawable/ic_baseline_local_laundry_service_24"
+            android:backgroundTint="#EBE6F4"
+            app:layout_constraintBottom_toTopOf="@+id/btnMachine2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutq">
+
+            <TextView
+                android:id="@+id/txtMachName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Washing machine 2"
+                android:textColor="#272727"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtHOR2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtHOR2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/poppins_italic"
+                android:text="Default Hostel"
+                android:textColor="#272727"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtMachName2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutMachine3"
+        android:layout_width="176dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayoutMachine4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMachine1"
+        android:background="@drawable/my_border">
+
+
+        <Button
+            android:id="@+id/btnMachine3"
+            android:layout_width="174dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Select"
+            app:icon="@drawable/ic_baseline_arrow_forward_24"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutw"
+            android:layout_width="174dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtAvailable3"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Available for use."
+                android:textAlignment="center"
+                android:textColor="#256019"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtBusy3"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Busy until 12:00"
+                android:textAlignment="center"
+                android:textColor="#7C1717"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtMaintenance3" />
+
+            <TextView
+                android:id="@+id/txtPowerOff3"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Powered Off."
+                android:textAlignment="center"
+                android:textColor="#272727"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAvailable3" />
+
+            <TextView
+                android:id="@+id/txtMaintenance3"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Under maintenance."
+                android:textAlignment="center"
+                android:textColor="#272727"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPowerOff3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="174dp"
+            android:layout_height="184dp"
+            android:background="@drawable/ic_baseline_local_laundry_service_24"
+            android:backgroundTint="#E2F3E6"
+            app:layout_constraintBottom_toTopOf="@+id/btnMachine3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutw">
+
+            <TextView
+                android:id="@+id/txtMachName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Washing machine 3"
+                android:textColor="#272727"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtHOR3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtHOR3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/poppins_italic"
+                android:text="Default Hostel"
+                android:textColor="#272727"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtMachName3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutMachine4"
+        android:layout_width="176dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayoutMachine3"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMachine2"
+        android:background="@drawable/my_border">
+
+
+        <Button
+            android:id="@+id/btnMachine4"
+            android:layout_width="174dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Select"
+            app:icon="@drawable/ic_baseline_arrow_forward_24"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoute"
+            android:layout_width="174dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtAvailable4"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Available for use."
+                android:textAlignment="center"
+                android:textColor="#256019"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtBusy4"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Busy until 12:00"
+                android:textAlignment="center"
+                android:textColor="#7C1717"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtMaintenance4" />
+
+            <TextView
+                android:id="@+id/txtPowerOff4"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Powered Off."
+                android:textAlignment="center"
+                android:textColor="#272727"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAvailable4" />
+
+            <TextView
+                android:id="@+id/txtMaintenance4"
+                android:layout_width="172dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="6dp"
+                android:text="Under maintenance."
+                android:textAlignment="center"
+                android:textColor="#272727"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPowerOff4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="174dp"
+            android:layout_height="184dp"
+            android:background="@drawable/ic_baseline_local_laundry_service_24"
+            android:backgroundTint="#DDE8ED"
+            app:layout_constraintBottom_toTopOf="@+id/btnMachine4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoute">
+
+            <TextView
+                android:id="@+id/txtShirtNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Washing machine 4"
+                android:textColor="#272727"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtHOR4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtHOR4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/poppins_italic"
+                android:text="Default Hostel"
+                android:textColor="#272727"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtShirtNumber" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/hidden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hidden"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

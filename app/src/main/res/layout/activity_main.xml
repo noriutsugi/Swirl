@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="10dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignIn"
+        android:layout_width="336dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="128dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:inputType="textCapSentences"
+        android:text="Sign in with Institute email"
+        android:textSize="16sp"
+        app:backgroundTint="#272727"
+        app:cornerRadius="6dp"
+        app:elevation="10dp"
+        app:icon="@drawable/googleg_standard_color_18"
+        app:iconGravity="end"
+        app:iconPadding="4dp"
+        app:iconSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:fontFamily="@font/source_sans_pro"
+        android:text="swirl"
+        android:textColor="#272727"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintStart_toStartOf="@+id/btnSignIn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_local_laundry_service_24"
+        app:tint="#272727" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="273dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Never worry about washing your favorate outfit again!"
+        android:textColor="#636363"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/txtWrongEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Only institute email is allowed"
+        android:textColor="#933939"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnSignIn"
+        app:layout_constraintStart_toStartOf="@+id/btnSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="707dp"
+        android:layout_height="492dp"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="-140dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_cyclone_24"
+        app:tint="#1400338A" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="367dp"
+        android:layout_height="403dp"
+        android:layout_marginStart="-150dp"
+        android:layout_marginBottom="-150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_shopping_basket_24"
+        app:tint="#1400338A" />
+</androidx.constraintlayout.widget.ConstraintLayout>

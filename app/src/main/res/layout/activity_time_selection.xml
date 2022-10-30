@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimeSelection">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Confirm usage time"
+        android:textColor="#272727"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="333dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Either find recommended time by entering kind of clothes:"
+        android:textColor="#272727"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutShirt"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/my_border"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayoutShort"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+
+        <Button
+            android:id="@+id/btnRemShirt"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_baseline_remove_24"
+            app:iconGravity="start"
+            app:iconPadding="0dp"
+            app:iconTint="#FF9B9B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnAddShirt"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_baseline_add_24"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:iconTint="#ACFF63"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayouta"
+            android:layout_width="76dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="-15dp"
+            android:background="@drawable/ic_baseline_dry_cleaning_24"
+            android:backgroundTint="#DDEDDF"
+            app:layout_constraintBottom_toTopOf="@+id/btnRemShirt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/txtShirtNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="0"
+                android:textColor="#272727"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtPayDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingTop="6dp"
+            android:text="Shirt, Tshirt"
+            android:textAlignment="center"
+            android:textColor="#272727"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayouta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutShort"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="@drawable/my_border"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutShirt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayoutShirt">
+
+
+        <Button
+            android:id="@+id/btnRemShort"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_baseline_remove_24"
+            app:iconGravity="start"
+            app:iconPadding="0dp"
+            app:iconTint="#FF9B9B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnAddShort"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_baseline_add_24"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:iconTint="#ACFF63"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutb"
+            android:layout_width="76dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="-15dp"
+            android:background="@drawable/ic_baseline_shopping_basket_24"
+            android:backgroundTint="#DDE8ED"
+            app:layout_constraintBottom_toTopOf="@+id/btnRemShort"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/txtShortNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="0"
+                android:textColor="#272727"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtShort"
+            android:layout_width="99dp"
+            android:layout_height="49dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingTop="6dp"
+            android:text="Shorts, Pants,  Jeans"
+            android:textAlignment="center"
+            android:textColor="#272727"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutSheet"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/my_border"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayoutShirt"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutShirt">
+
+
+        <Button
+            android:id="@+id/btnRemSheet"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_baseline_remove_24"
+            app:iconGravity="start"
+            app:iconPadding="0dp"
+            app:iconTint="#FF9B9B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnAddSheet"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_baseline_add_24"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:iconTint="#ACFF63"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="76dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="-15dp"
+            android:background="@drawable/ic_baseline_shopping_basket_24"
+            android:backgroundTint="#EDDDDD"
+            app:layout_constraintBottom_toTopOf="@+id/btnRemSheet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/txtSheetNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="0"
+                android:textColor="#272727"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingTop="6dp"
+            android:text="Bedsheets"
+            android:textAlignment="center"
+            android:textColor="#272727"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/txtpfname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="Or enter time manually:"
+        android:textColor="#272727"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutSheet" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutWash"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/my_border"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayoutDry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpfname">
+
+
+        <Button
+            android:id="@+id/btnDecWash"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_baseline_remove_24"
+            app:iconGravity="start"
+            app:iconPadding="0dp"
+            app:iconTint="#FF9B9B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnIncWash"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_baseline_add_24"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:iconTint="#ACFF63"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutd"
+            android:layout_width="76dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="-15dp"
+            android:background="@drawable/ic_baseline_wash_24"
+            android:backgroundTint="#DDE7ED"
+            app:layout_constraintBottom_toTopOf="@+id/btnDecWash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/txtWashMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="25"
+                android:textColor="#272727"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtWash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingTop="6dp"
+            android:text="Washing minutes"
+            android:textAlignment="center"
+            android:textColor="#272727"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutDry"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="@drawable/my_border"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutWash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayoutWash">
+
+
+        <Button
+            android:id="@+id/btnDecDry"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_baseline_remove_24"
+            app:iconGravity="start"
+            app:iconPadding="0dp"
+            app:iconTint="#FF9B9B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnIncDry"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#272727"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:inputType="textCapSentences"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_baseline_add_24"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:iconTint="#ACFF63"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoute"
+            android:layout_width="76dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="-15dp"
+            android:background="@drawable/ic_baseline_dry_24"
+            android:backgroundTint="#EDEBDD"
+            app:layout_constraintBottom_toTopOf="@+id/btnDecDry"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/txtDryMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="5"
+                android:textColor="#272727"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtDry"
+            android:layout_width="79dp"
+            android:layout_height="49dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingTop="6dp"
+            android:text="Drying minutes"
+            android:textAlignment="center"
+            android:textColor="#272727"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPay"
+        android:layout_width="336dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:inputType="textCapSentences"
+        android:text="Proceed to pay Rs.60"
+        android:textSize="16sp"
+        app:backgroundTint="#272727"
+        app:cornerRadius="6dp"
+        app:icon="@drawable/ic_baseline_currency_rupee_24"
+        app:iconGravity="end"
+        app:iconPadding="4dp"
+        app:iconSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-4dp"
+        android:fontFamily="@font/poppins"
+        android:text="default machine"
+        android:textColor="#272727"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/txtHORName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-4dp"
+        android:fontFamily="@font/poppins_italic"
+        android:text="default hostel"
+        android:textColor="#272727"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPay"
+        app:layout_constraintStart_toStartOf="@+id/btnPay"
+        app:srcCompat="@drawable/ic_baseline_local_laundry_service_24" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPay"
+        app:layout_constraintEnd_toEndOf="@+id/btnPay"
+        app:srcCompat="@drawable/ic_baseline_apartment_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

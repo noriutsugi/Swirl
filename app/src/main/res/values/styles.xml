@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="noAnimTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:statusBarColor">#272727</item>
+    </style>
+    <style name="LeftButtonShapeAppearance">
+        <item name="cornerSizeTopLeft">6dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">6dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+    <style name="RightButtonShapeAppearance">
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">6dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">6dp</item>
+    </style>
+</resources>

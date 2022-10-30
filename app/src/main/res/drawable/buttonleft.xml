@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <style android:name="LeftButtonShapeAppearance">
+        <item android:name="cornerSizeTopLeft">6dp</item>
+        <item android:name="cornerSizeTopRight">0dp</item>
+        <item android:name="cornerSizeBottonLeft">6dp</item>
+        <item android:name="cornerSizeBottonRight">0dp</item>
+    </style>
+</selector>

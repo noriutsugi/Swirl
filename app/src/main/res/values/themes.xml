@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Swirl" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#272727</item>
+        <item name="colorPrimaryVariant">#636363</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#272727</item>
+        <item name="colorSecondaryVariant">#636363</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor">#636363</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
